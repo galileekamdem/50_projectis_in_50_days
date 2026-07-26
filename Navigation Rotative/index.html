@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rotating Navigation</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+
+  <!--
+    FLATICON UICONS
+    C'est la bibliothèque d'icônes qu'on utilise.
+    On l'importe avec un <link> comme pour le CSS.
+    Sans cette ligne, les <i class="fi fi-..."> ne s'affichent pas.
+  -->
+  <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-straight/css/uicons-bold-straight.css" />
+  <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css" />
+
+  <!-- Notre fichier CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- BOUTON HAMBURGER -->
+  <button class="btn-menu" id="btnMenu" aria-label="Ouvrir le menu">
+    <span class="barre"></span>
+    <span class="barre"></span>
+    <span class="barre"></span>
+  </button>
+
+  <!-- NAVIGATION (menu latéral) -->
+  <nav>
+    <ul>
+      <li>
+        <a href="#">
+          <!-- fi-bs-home = Bold Straight → lien uicons-bold-straight -->
+          <i class="fi fi-bs-home"></i>
+          Accueil
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <!-- fi-rr-user = Regular Rounded → lien uicons-regular-rounded -->
+          <i class="fi fi-rr-user"></i>
+          À propos
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fi fi-rr-document"></i>
+          Portfolio
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fi fi-rr-envelope"></i>
+          Contact
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- CONTENEUR PRINCIPAL — c'est lui qui tourne -->
+  <div class="conteneur">
+
+    <header class="entete">
+      <h1>Bonjour, je suis <span>Kevin</span></h1>
+      <p class="sous-titre">Développeur web · Formateur</p>
+    </header>
+
+    <section class="article">
+      <img
+        class="article-image"
+        src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=900&q=80"
+        alt="Programmation"
+      />
+      <h2>Apprendre à coder, c'est libérateur</h2>
+      <p>
+        Le développement web est l'une des compétences les plus puissantes de notre époque.
+        Avec HTML, CSS et JavaScript, tu peux créer n'importe quelle interface, animer
+        des éléments, et rendre tes projets vivants.
+      </p>
+      <p>
+        La navigation rotative utilise la propriété CSS <strong>transform: rotate()</strong>
+        pour faire pivoter le contenu principal quand l'utilisateur ouvre le menu.
+        JavaScript ajoute et enlève une classe CSS sur le body — tout le reste est géré par CSS.
+      </p>
+    </section>
+
+    <div class="grille">
+      <div class="carte">
+        <img class="carte-image" src="https://images.unsplash.com/photo-1621839673705-6617adf9e890?w=400&q=80" alt="HTML" />
+        <div class="carte-corps">
+          <h3>HTML</h3>
+          <p>La structure de ta page. Comme le squelette d'un corps humain.</p>
+        </div>
+      </div>
+      <div class="carte">
+        <img class="carte-image" src="https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?w=400&q=80" alt="CSS" />
+        <div class="carte-corps">
+          <h3>CSS</h3>
+          <p>Le style visuel. Les couleurs, les tailles, les animations.</p>
+        </div>
+      </div>
+      <div class="carte">
+        <img class="carte-image" src="https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?w=400&q=80" alt="JavaScript" />
+        <div class="carte-corps">
+          <h3>JavaScript</h3>
+          <p>L'interactivité. Ce qui fait bouger et réagir ta page.</p>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- fin .conteneur -->
+
+  <script src="script.js"></script>
+
+</body>
+</html>
