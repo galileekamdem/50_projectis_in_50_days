@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progression Step</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+        <!--la barre de Progression -->
+        <div class="progress-container">
+<!--pour les lignes grises sur le page (visible malgré tout en arrière plan)-->
+            <div class="line-background"></div>
+<!--les lignes bleu-->
+            <div class="line-active" id="lineActive"></div>
+            
+            <!-- Les 4 étapes (cercles) -->
+            <!-- La classe "active" rend le cercle bleu -->
+             <div class="circle active" id="step1"></div>
+             <div class="circle" id="step2">2</div>
+             <div class="circle" id="step3">3</div>
+             <div class="circle" id="step4">4</div>
+        </div>
+    
+        <!-- LES BOUTONS -->
+    <div class="buttons">
+      <button id="btnPrev">Prev</button>
+      <button id="btnNext">Next</button>
+    </div>
+
+    </div>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
