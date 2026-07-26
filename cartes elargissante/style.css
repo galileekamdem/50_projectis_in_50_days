@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #1a1a2e;
+    font-family: sans-serif;
+}
+.container { /*alignement des cartes cote à cote */
+    display: flex;
+    gap: 12px;
+    width: 90vw;
+    height: 70vh;
+}
+.card { 
+    /*chaque card prendra 1 partie de l'espace disponible*/
+    flex: 1;
+
+    background-size: cover;
+    background-position: center;
+    border-radius: 26px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+
+    /*annimation de transition */
+    transition: flex 0.6s ease;
+}
+
+/*la carte active prend plus de place*/
+.card.active {
+    flex: 5;
+}
+
+/* Le texte en bas de la carte */
+.label {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color:white;
+    font-size: 1.2rem;
+    font-weight: bold;
+
+      /* Caché par défaut */
+    opacity: 0;
+    transition: opacity 0.4s ease 0.2s; /* délai de 0.2s */
+}
+
+/* Le texte apparaît uniquement sur la carte active */
+.card.active .label {
+    opacity: 1;
+}
+
